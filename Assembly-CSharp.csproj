@@ -37,9 +37,20 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\00.MAIN_MAIN\02.Scripts\FreeCamera.cs" />
-     <Compile Include="Assets\LEE\02.Scripts\SwimmingController.cs" />
+     <Compile Include="Assets\LEE\02.Scripts\BoidHelper.cs" />
+     <Compile Include="Assets\LEE\02.Scripts\ActionTest.cs" />
+     <Compile Include="Assets\LEE\02.Scripts\Magnet.cs" />
+     <Compile Include="Assets\LEE\02.Scripts\PlayerCtrl.cs" />
+     <Compile Include="Assets\LEE\02.Scripts\Boid.cs" />
+     <Compile Include="Assets\LEE\02.Scripts\BoidSettings.cs" />
+     <Compile Include="Assets\LEE\02.Scripts\FloatingObject.cs" />
+     <Compile Include="Assets\LEE\02.Scripts\BoidManager.cs" />
      <Compile Include="Assets\LEE\02.Scripts\CustomGravity.cs" />
-     <Compile Include="Assets\LEE\02.Scripts\GrabAction.cs" />
+     <Compile Include="Assets\LEE\02.Scripts\Spawner.cs" />
+     <Compile Include="Assets\LEE\02.Scripts\SwimmingController.cs" />
+     <Compile Include="Assets\LEE\02.Scripts\ControllGrabObject.cs" />
+     <Compile Include="Assets\LEE\02.Scripts\AutoMoving.cs" />
+     <None Include="Assets\LEE\02.Scripts\BoidCompute.compute" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -233,7 +244,7 @@
         <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Valve.Newtonsoft.Json">
-        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Assets/VR/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -580,11 +591,23 @@
     <Reference Include="System.Xml.Serialization">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.XR.Management">
+        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Timeline.Editor">
         <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Subsystem.Registration">
+        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenVR">
+        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.XR.OpenVR.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenVR.Editor">
+        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.XR.OpenVR.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
         <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -595,35 +618,8 @@
     <Reference Include="Unity.Timeline">
         <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Rider.Editor">
-        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
         <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.Management">
-        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.XR.Management.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Subsystem.Registration">
-        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.OpenVR">
-        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.XR.OpenVR.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.OpenVR.Editor">
-        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.XR.OpenVR.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
         <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
@@ -631,14 +627,29 @@
     <Reference Include="Unity.XR.Management.Editor">
         <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.XR.Management.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Rider.Editor">
+        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
         <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
         <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VisualStudio.Editor">
+        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
         <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

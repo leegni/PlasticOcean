@@ -36,14 +36,14 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\VR\SteamVR_Input\ActionSetClasses\SteamVR_Input_ActionSet_mixedreality.cs" />
-     <Compile Include="Assets\VR\SteamVR_Input\SteamVR_Input_Actions.cs" />
-     <Compile Include="Assets\VR\SteamVR_Input\ActionSetClasses\SteamVR_Input_ActionSet_buggy.cs" />
-     <Compile Include="Assets\VR\SteamVR_Input\ActionSetClasses\SteamVR_Input_ActionSet_default.cs" />
-     <Compile Include="Assets\VR\SteamVR_Input\SteamVR_Input_ActionSets.cs" />
-     <Compile Include="Assets\VR\SteamVR_Input\SteamVR_Input_Initialization.cs" />
-     <Compile Include="Assets\VR\SteamVR_Input\ActionSetClasses\SteamVR_Input_ActionSet_platformer.cs" />
-     <None Include="Assets\VR\SteamVR_Input\SteamVR_Actions.asmdef" />
+     <Compile Include="Assets\SteamVR_Input\ActionSetClasses\SteamVR_Input_ActionSet_mixedreality.cs" />
+     <Compile Include="Assets\SteamVR_Input\ActionSetClasses\SteamVR_Input_ActionSet_platformer.cs" />
+     <Compile Include="Assets\SteamVR_Input\SteamVR_Input_ActionSets.cs" />
+     <Compile Include="Assets\SteamVR_Input\ActionSetClasses\SteamVR_Input_ActionSet_default.cs" />
+     <Compile Include="Assets\SteamVR_Input\SteamVR_Input_Actions.cs" />
+     <Compile Include="Assets\SteamVR_Input\SteamVR_Input_Initialization.cs" />
+     <Compile Include="Assets\SteamVR_Input\ActionSetClasses\SteamVR_Input_ActionSet_buggy.cs" />
+     <None Include="Assets\SteamVR_Input\SteamVR_Actions.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -243,7 +243,7 @@
         <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Valve.Newtonsoft.Json">
-        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Assets/VR/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
