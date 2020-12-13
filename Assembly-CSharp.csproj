@@ -36,12 +36,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\00.MAIN_MAIN\02.Scripts\FreeCamera.cs" />
      <Compile Include="Assets\LEE\02.Scripts\BoidHelper.cs" />
      <Compile Include="Assets\LEE\02.Scripts\ActionTest.cs" />
      <Compile Include="Assets\LEE\02.Scripts\Magnet.cs" />
      <Compile Include="Assets\LEE\02.Scripts\PlayerCtrl.cs" />
      <Compile Include="Assets\LEE\02.Scripts\Boid.cs" />
+     <Compile Include="Assets\00.MAIN_MAIN\02.Scripts\FreeCamera.cs" />
      <Compile Include="Assets\LEE\02.Scripts\BoidSettings.cs" />
      <Compile Include="Assets\LEE\02.Scripts\FloatingObject.cs" />
      <Compile Include="Assets\LEE\02.Scripts\BoidManager.cs" />
@@ -240,11 +240,11 @@
     <Reference Include="UnityEditor">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework">
-        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="Valve.Newtonsoft.Json">
         <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+        <HintPath>C:/Users/GeunheeLee/Desktop/Unity/PlasticOcean/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.17f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
