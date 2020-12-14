@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: fe2cdf2ee58b6d84c90d2891e2b8a997
+timeCreated: 1505414360
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - internalHandsMat: {fileID: 2100000, guid: 3bb7a1d87c2c52c40a1a0cef655bd95a, type: 2}
+  - internalBlitMat: {fileID: 2100000, guid: e7d8aa7c0b5f35845a48b0d3f3e9c522, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

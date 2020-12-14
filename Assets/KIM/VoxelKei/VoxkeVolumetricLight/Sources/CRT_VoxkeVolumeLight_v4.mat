@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CRT_VoxkeVolumeLight_v4
+  m_Shader: {fileID: 4800000, guid: 7b0643c6da42ff54284bafb16f098ade, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _InputCamTex:
+        m_Texture: {fileID: 8400000, guid: bf9c251cfed90164dbaa5c8c7e085ea7, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _InputColorTex:
+        m_Texture: {fileID: 2800000, guid: b26ff1749e42815409ccc19870ac9d5a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _InputDepthTex:
+        m_Texture: {fileID: 8400000, guid: bf9c251cfed90164dbaa5c8c7e085ea7, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _FarClip: 10
+    - _LightDecay: 3
+    - _NearClip: 0.2
+    - _NoiseValue: 0
+    - _VolumeSize: 10
+    - test: 0
+    m_Colors: []

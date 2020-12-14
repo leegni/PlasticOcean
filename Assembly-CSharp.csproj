@@ -72,9 +72,36 @@
     <Compile Include="Assets\LEE\02.Scripts\AutoMoving.cs" />
     <Compile Include="Assets\LEE\02.Scripts\MyGizmos.cs" />
     <Compile Include="Assets\LEE\02.Scripts\TriggerManager.cs" />
+    <Compile Include="Assets\KIM\Sea\JSTurtles\SeaTurtle\Scripts\SeaTurtleCameraScript.cs" />
+    <Compile Include="Assets\KIM\terrain\Underwater life deluxe\Scripts\GhostFreeRoamCamera\Scripts\GhostFreeRoamCamera.cs" />
+    <Compile Include="Assets\KIM\Sea\Davis3D\HumpbackWhale\SplineEditor\BezierSpline.cs" />
+    <Compile Include="Assets\KIM\Sea\Davis3D\HumpbackWhale\SplineEditor\BezierCurve.cs" />
+    <Compile Include="Assets\KIM\Sea\JSTurtles\SeaTurtle\Scripts\SeaTurtleUserController.cs" />
+    <Compile Include="Assets\KIM\Sea\Davis3D\HumpbackWhale\SplineEditor\Bezier.cs" />
+    <Compile Include="Assets\KIM\terrain\Underwater Cave Environment Pack\VolumetricLights\Scripts\VolumetricLight.cs" />
+    <Compile Include="Assets\KIM\Sea\Davis3D\HumpbackWhale\SplineEditor\BezierControlPointMode.cs" />
+    <Compile Include="Assets\KIM\Sea\Davis3D\HumpbackWhale\Scripts\CausticsController.cs" />
+    <Compile Include="Assets\KIM\Sea\Davis3D\HumpbackWhale\SplineEditor\SplineDecorator.cs" />
+    <Compile Include="Assets\KIM\Sea\Davis3D\HumpbackWhale\Scripts\FlyCamera.cs" />
+    <Compile Include="Assets\KIM\Sea\Water_Splashes\Scripts\Small_Splash.cs" />
+    <Compile Include="Assets\KIM\Sea\JSTurtles\SeaTurtle\Scripts\SeaTurtleCharacter.cs" />
+    <Compile Include="Assets\KIM\Sea\Davis3D\HumpbackWhale\Scripts\HumpBackWhale.cs" />
+    <Compile Include="Assets\KIM\terrain\Underwater_FX\Scripts\ScrollUV_Caustics.cs" />
+    <Compile Include="Assets\KIM\Sea\Davis3D\HumpbackWhale\SplineEditor\SplineWalkerMode.cs" />
+    <Compile Include="Assets\KIM\Sea\Davis3D\HumpbackWhale\SplineEditor\SplineWalker.cs" />
+    <Compile Include="Assets\KIM\terrain\Underwater Cave Environment Pack\VolumetricLights\Scripts\VolumetricLightRenderer.cs" />
+    <Compile Include="Assets\KIM\Sea\Water_Splashes\Scripts\Big_Splash.cs" />
+    <Compile Include="Assets\KIM\VRHandsShader\VRHandsDrawer.cs" />
+    <Compile Include="Assets\KIM\Sea\Davis3D\HumpbackWhale\SplineEditor\Line.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\KIM\Sea\Corals\__CubemapsShaders\ASE_Standart.shader" />
+     <None Include="Assets\KIM\VoxelKei\VoxkeVolumetricLight\Sources\VoxkeVolumeLight_v5.shader" />
      <None Include="Assets\LEE\02.Scripts\BoidCompute.compute" />
+     <None Include="Assets\KIM\VRHandsShader\Shaders\VRHandsInternalBlit.shader" />
+     <None Include="Assets\KIM\Sea\Corals\__CubemapsShaders\ASE_Standart2Sided.shader" />
+     <None Include="Assets\KIM\VoxelKei\VoxkeVolumetricLight\Sources\CRT_VoxkeVolumeLight_v3.shader" />
+     <None Include="Assets\KIM\VRHandsShader\Shaders\VRHands_Rim.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\2020.1.17f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

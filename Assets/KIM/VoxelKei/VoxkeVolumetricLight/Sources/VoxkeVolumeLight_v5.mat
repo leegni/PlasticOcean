@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: VoxkeVolumeLight_v5
+  m_Shader: {fileID: 4800000, guid: 73a3b3dc1e0f5ce43ad68f88ea97929f, type: 3}
+  m_ShaderKeywords: SMOKE ZCORRECT
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BrightnessTex:
+        m_Texture: {fileID: 8400000, guid: 489db1a7dceb3c44394c6de6bcdecf66, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise3D:
+        m_Texture: {fileID: 11700000, guid: 92bb2ed1566342e46b3ad0f974da69a5, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Volume:
+        m_Texture: {fileID: 8600000, guid: 921fafc9ad39b0441aaabab597ab0ef2, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _CubeScale: 10
+    - _Intensity: 0.003
+    - _Iteration: 200
+    - _LoopLimit: 300
+    - _NoiseDensity: -0.06
+    - _NoiseScale: 4
+    - _SMOKE: 1
+    - _Step: 100
+    - _ZCORRECT: 1
+    - _Zoffset: 0
+    m_Colors:
+    - _Color: {r: 0.13394447, g: 0.56954193, b: 0.6603774, a: 1}
+    - _Color1: {r: 0, g: 1, b: 0.6500001, a: 1}
+    - _Color2: {r: 0.18039213, g: 0.19163412, b: 0.85490197, a: 1}
+    - _NoiseScroll: {r: -0.2, g: 0, b: -0.54, a: 0}
+    - _Offset: {r: 30, g: 0.05, b: -15, a: 1}
+    - _Zoffset: {r: 50, g: -30, b: 50, a: 1}
+  m_BuildTextureStacks: []
