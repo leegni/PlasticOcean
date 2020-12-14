@@ -4,28 +4,26 @@ using UnityEngine;
 
 public class Magnet : MonoBehaviour
 {
- public float magnetForce = 100;
-
-    List<Rigidbody> caughtRigidbodies = new List<Rigidbody>();
-
-    void FixedUpdate()
+    [SerializeField]
+    private Transform[] points;
+     void Start()
     {
-        for (int i = 0; i < caughtRigidbodies.Count; i++)
-        {
-            caughtRigidbodies[i].velocity = (transform.position - (caughtRigidbodies[i].transform.position + caughtRigidbodies[i].centerOfMass)) * magnetForce * Time.deltaTime;
-        }
+        points = GetComponentsInChildren<Transform>();
     }
-
     void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<Rigidbody>())
+        if (other.CompareTag("PLASTIC"))
         {
-            Rigidbody r = other.GetComponent<Rigidbody>();
-
-            if(!caughtRigidbodies.Contains(r))
+            for(int i=1; i<points.Length; i++)
             {
-                //Add Rigidbody
-                caughtRigidbodies.Add(r);
+                if (points[i].childCount == 0)
+                {
+                    other.transform.parent = points[i].transform;
+                    other.GetComponent<Rigidbody>().isKinematic = true;
+                    other.GetComponent<FloatingObject>().enabled = false;
+                    
+                }
+                else return;
             }
         }
     }
