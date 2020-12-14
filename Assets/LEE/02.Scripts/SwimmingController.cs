@@ -8,7 +8,7 @@ public class SwimmingController : MonoBehaviour
 {
     public GameObject leftHand;
     public GameObject rightHand;
-
+    public float rotateSpeed = 2.0f;
 
     [SerializeField] private float swimmingForce;
     [SerializeField] private float resistanceForce;
@@ -47,12 +47,12 @@ public class SwimmingController : MonoBehaviour
             }
             }
 
-        else if(rBtnPressed){
-             transform.Rotate(-Vector3.up * 2.0f * Time.deltaTime);
+        if(rBtnPressed){
+             transform.Rotate(-Vector3.up * rotateSpeed * Time.deltaTime);
         }
 
-        else if(lBtnPressed){
-            transform.Rotate(Vector3.up * 2.0f * Time.deltaTime);
+        if(lBtnPressed){
+            transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
         }
             ApplyReststanceForce();
 

@@ -5,19 +5,18 @@ using UnityEngine;
 public class TriggerManager : MonoBehaviour
 {
 
-    public GameObject fishSpwanPoint, plasticSpawnPoint, lastSpawnPoint;
+    public GameObject fishSpawnPoint, plasticSpawnPoint, lastSpawnPoint;
     private int triggerType = 0;
     public GameObject testObj;
+
+    public GameObject spawnPlastic, spawnFish;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
 
      void OnTriggerEnter(Collider other)
     {
@@ -59,13 +58,16 @@ public class TriggerManager : MonoBehaviour
     void FirstTrigger()
     {
         GameObject tobj = Instantiate<GameObject>(testObj);
-        tobj.transform.position = fishSpwanPoint.transform.position;
+        Instantiate<GameObject>(spawnFish, Vector3.zero, Quaternion.identity);
+        tobj.transform.position = fishSpawnPoint.transform.position;
         tobj.transform.rotation = Quaternion.identity;
+        
     }
 
     void SecondTrigger()
     {
         GameObject tobj = Instantiate<GameObject>(testObj);
+        Instantiate<GameObject>(spawnPlastic, Vector3.zero, Quaternion.identity);
         tobj.transform.position = plasticSpawnPoint.transform.position;
         tobj.transform.rotation = Quaternion.identity;
     }
