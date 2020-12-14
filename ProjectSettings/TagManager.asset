@@ -20,9 +20,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Obstacle
+  - Boid
+  - Wall
   - 
   - 
   - 
