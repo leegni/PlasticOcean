@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3559297176007848097}
   - component: {fileID: 3559297176007848096}
-  - component: {fileID: 409518416531058946}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,21 +48,3 @@ MonoBehaviour:
   spawnCount: 80
   colour: {r: 1, g: 1, b: 1, a: 1}
   showSpawnRegion: 2
---- !u!114 &409518416531058946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3559297176007848099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c53657e503d7a4738b0a9fa634fc1b92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: {x: 0, y: 0, z: 0}
-  forward: {x: 0, y: 0, z: 0}
-  avgFlockHeading: {x: 0, y: 0, z: 0}
-  avgAvoidanceHeading: {x: 0, y: 0, z: 0}
-  centreOfFlockmates: {x: 0, y: 0, z: 0}
-  numPerceivedFlockmates: 0

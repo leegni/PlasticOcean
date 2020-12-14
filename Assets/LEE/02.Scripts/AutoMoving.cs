@@ -14,6 +14,7 @@ public float speed = 1f;
  void Update() {
      
      transform.position += target.position * speed * Time.deltaTime;
+    
 }
  
  

@@ -45,6 +45,8 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 3
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -220,6 +222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7168885472253742758}
   - component: {fileID: 1006269311145223132}
+  - component: {fileID: -55816714212704753}
   m_Layer: 0
   m_Name: Small_Fish_01
   m_TagString: Untagged
@@ -236,7 +239,7 @@ Transform:
   m_GameObject: {fileID: 6136056095240780981}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 4695409953946816244}
   - {fileID: 3333353516518035979}
@@ -262,6 +265,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!135 &-55816714212704753
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6136056095240780981}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6539109492776040983
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,8 +331,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7847735164305606746}
-  m_LocalRotation: {x: -5.820766e-10, y: 0.000000008168172, z: 0.0000000013969839,
-    w: 1}
+  m_LocalRotation: {x: -5.820766e-10, y: 0.000000008168172, z: 0.0000000013969839, w: 1}
   m_LocalPosition: {x: -0.08112701, y: 0.000000002682209, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []

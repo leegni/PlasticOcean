@@ -30,8 +30,11 @@ public class SwimmingController : MonoBehaviour
 
     private void FixedUpdate()
     {
+            bool rBtnPressed = SteamVR_Input.GetStateDown("GrabGrip", SteamVR_Input_Sources.RightHand);
+            bool lBtnPressed = SteamVR_Input.GetStateDown("GrabGrip", SteamVR_Input_Sources.LeftHand);
+
           currentWaitTime += Time.deltaTime;
-        
+        if(rBtnPressed&&lBtnPressed){
           Vector3 leftHandDirection = leftHand.GetComponent<SteamVR_Behaviour_Pose>().GetVelocity();
           Vector3 rightHandDirection = rightHand.GetComponent<SteamVR_Behaviour_Pose>().GetVelocity();
           Vector3 localVelocity = leftHandDirection + rightHandDirection;
@@ -42,9 +45,16 @@ public class SwimmingController : MonoBehaviour
                 AddSwimmingForce(localVelocity);
                 currentWaitTime = 0;
             }
+            }
+
+        else if(rBtnPressed){
+             transform.Rotate(-Vector3.up * 2.0f * Time.deltaTime);
+        }
+
+        else if(lBtnPressed){
+            transform.Rotate(Vector3.up * 2.0f * Time.deltaTime);
+        }
             ApplyReststanceForce();
-
-
 
     }
 
@@ -66,4 +76,5 @@ public class SwimmingController : MonoBehaviour
         rigidbody.AddForce(worldSpaceVelocity * swimmingForce, ForceMode.Acceleration);
         currentDirection = worldSpaceVelocity.normalized;
     }
+
 }

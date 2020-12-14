@@ -21,26 +21,31 @@ public class TriggerManager : MonoBehaviour
 
      void OnTriggerEnter(Collider other)
     {
-        
+        if(other.CompareTag("STRIGGER")){
         switch (triggerType)
         {
             case 0:
                 IntroTrigger();
                 triggerType++;
+                Destroy(other.gameObject);
                 break;
             case 1:
                 FirstTrigger();
                 triggerType++;
+                Destroy(other.gameObject);
                 break;
             case 2:
                 SecondTrigger();
                 triggerType++;
+                Destroy(other.gameObject);
                 break;
             case 3:
                 LastTrigger();
                 triggerType++;
+                Destroy(other.gameObject);
                 break;
 
+        }
         }
     }
 
