@@ -38,12 +38,14 @@ public class ControllGrabObject : MonoBehaviour
     //충돌이 시작되는 순간
     public void OnTriggerEnter(Collider other)
     {
+        if(other.CompareTag("PLASTIC"))
         SetCollidingObject(other);
     }
     //충돌중일 때
     public void OnTriggerStay(Collider other)
     {
-        SetCollidingObject(other);
+        if (other.CompareTag("PLASTIC"))
+            SetCollidingObject(other);
     }
     //충돌이 끝나는 순간
     public void OnTriggerExit(Collider other)
@@ -68,6 +70,7 @@ public class ControllGrabObject : MonoBehaviour
     //객체를 잡음
     private void GrabObject()
     {
+        collidingObject.transform.parent = null;
         objectInHand = collidingObject;
         collidingObject = null;
 

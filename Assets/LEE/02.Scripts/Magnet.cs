@@ -14,7 +14,7 @@ public class Magnet : MonoBehaviour
     {
         if (other.CompareTag("PLASTIC"))
         {
-            for(int i=1; i<points.Length; i++)
+            for(int i=8; i<points.Length; i++)
             {
                 if (points[i].childCount == 0)
                 {

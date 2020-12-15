@@ -140,20 +140,20 @@ MonoBehaviour:
     _bezierPath:
       points:
       - {x: 2, y: 0, z: 0}
-      - {x: 17.264812, y: 2.3527048, z: -1.793584}
-      - {x: 33.829105, y: 17.540657, z: 8.328449}
-      - {x: 42.78835, y: 27.739058, z: 15.910748}
-      - {x: 56.531853, y: 43.38343, z: 27.542013}
-      - {x: 70.80078, y: 84.90111, z: 41.85137}
-      - {x: 67.64453, y: 84.70473, z: 65.49278}
-      - {x: 61.753773, y: 84.33821, z: 109.616585}
-      - {x: 40.09343, y: -9.104402, z: 150.15605}
+      - {x: 17.267258, y: 2.353093, z: -1.7936921}
+      - {x: 33.833588, y: 17.544895, z: 8.3281145}
+      - {x: 42.794575, y: 27.745283, z: 15.910748}
+      - {x: 56.539673, y: 43.39148, z: 27.541615}
+      - {x: 70.813446, y: 84.9134, z: 41.849464}
+      - {x: 67.65698, y: 84.71718, z: 65.49278}
+      - {x: 61.765713, y: 84.35095, z: 109.621}
+      - {x: 40.09821, y: -9.10444, z: 150.15619}
       - {x: -1.1646881, y: -23.009575, z: 140.87387}
-      - {x: -37.12345, y: -35.12871, z: 132.78392}
-      - {x: -81.23927, y: 23.491522, z: 83.32301}
-      - {x: -73.18117, y: 26.385862, z: 45.48067}
-      - {x: -67.46491, y: 28.439049, z: 18.636099}
-      - {x: -25.02035, y: -4.164539, z: 3.174835}
+      - {x: -37.126614, y: -35.12834, z: 132.78404}
+      - {x: -81.252235, y: 23.497555, z: 83.32576}
+      - {x: -73.19362, y: 26.392088, z: 45.48067}
+      - {x: -67.47667, y: 28.44553, z: 18.632576}
+      - {x: -25.023914, y: -4.1651087, z: 3.1749375}
       isClosed: 1
       space: 0
       controlMode: 3
@@ -170,7 +170,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 0
       flipNormals: 0
-    vertexPathUpToDate: 1
+    vertexPathUpToDate: 0
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1
@@ -183,7 +183,7 @@ MonoBehaviour:
     keepConstantHandleSize: 0
     showNormalsInVertexMode: 0
     showBezierPathInVertexMode: 0
-    showDisplayOptions: 0
+    showDisplayOptions: 1
     showPathOptions: 1
     showVertexPathDisplayOptions: 0
     showVertexPathOptions: 1

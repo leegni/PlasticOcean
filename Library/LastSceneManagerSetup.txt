@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/LEE/01.Scenes/SampleScene.unity
+- path: Assets/LEE/01.Scenes/GrabTest.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

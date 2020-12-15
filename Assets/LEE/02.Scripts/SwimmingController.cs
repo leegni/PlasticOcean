@@ -6,8 +6,11 @@ using Valve.VR;
 [RequireComponent(typeof(Rigidbody))]
 public class SwimmingController : MonoBehaviour
 {
+    public SteamVR_Input_Sources handTypeL;
+    public SteamVR_Input_Sources handTypeR;
     public GameObject leftHand;
     public GameObject rightHand;
+    public SteamVR_Action_Boolean grabAction;
     public float rotateSpeed = 2.0f;
 
     [SerializeField] private float swimmingForce;
@@ -28,16 +31,31 @@ public class SwimmingController : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
     }
 
+    private void Update()
+    {
+        if (grabAction.GetLastState(handTypeR))
+        {
+            transform.Rotate(-Vector3.up * rotateSpeed * Time.deltaTime);
+
+        }
+
+        if (grabAction.GetLastState(handTypeL))
+        {
+            transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
+        }
+    }
+
     private void FixedUpdate()
     {
-            bool rBtnPressed = SteamVR_Input.GetStateDown("GrabGrip", SteamVR_Input_Sources.RightHand);
-            bool lBtnPressed = SteamVR_Input.GetStateDown("GrabGrip", SteamVR_Input_Sources.LeftHand);
-
-          currentWaitTime += Time.deltaTime;
-        if(rBtnPressed&&lBtnPressed){
-          Vector3 leftHandDirection = leftHand.GetComponent<SteamVR_Behaviour_Pose>().GetVelocity();
-          Vector3 rightHandDirection = rightHand.GetComponent<SteamVR_Behaviour_Pose>().GetVelocity();
-          Vector3 localVelocity = leftHandDirection + rightHandDirection;
+        // bool rBtnPressed = SteamVR_Input.GetStateDown("GrabGrip", SteamVR_Input_Sources.RightHand);
+        //    bool lBtnPressed = SteamVR_Input.GetStateDown("GrabGrip", SteamVR_Input_Sources.LeftHand);
+        
+        currentWaitTime += Time.deltaTime;
+        if (grabAction.GetLastState(handTypeR) && grabAction.GetLastState(handTypeL))
+        {
+            Vector3 leftHandDirection = leftHand.GetComponent<SteamVR_Behaviour_Pose>().GetVelocity();
+            Vector3 rightHandDirection = rightHand.GetComponent<SteamVR_Behaviour_Pose>().GetVelocity();
+            Vector3 localVelocity = leftHandDirection + rightHandDirection;
 
             localVelocity *= -1f;
             if (localVelocity.sqrMagnitude > deadZone * deadZone)
@@ -45,17 +63,11 @@ public class SwimmingController : MonoBehaviour
                 AddSwimmingForce(localVelocity);
                 currentWaitTime = 0;
             }
-            }
+  
 
-        if(rBtnPressed){
-             transform.Rotate(-Vector3.up * rotateSpeed * Time.deltaTime);
-        }
-
-        if(lBtnPressed){
-            transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
         }
             ApplyReststanceForce();
-
+  
     }
 
     private void ApplyReststanceForce()
