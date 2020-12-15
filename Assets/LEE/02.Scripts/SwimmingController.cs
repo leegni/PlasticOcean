@@ -12,12 +12,11 @@ public class SwimmingController : MonoBehaviour
     public GameObject rightHand;
     public SteamVR_Action_Boolean grabAction;
     public SteamVR_Action_Boolean clickAction;
-    public float rotateSpeed = 2.0f;
 
-    [SerializeField] private float swimmingForce;
-    [SerializeField] private float resistanceForce;
-    [SerializeField] private float deadZone;
-    [SerializeField] private float interval;
+    [SerializeField] private float swimmingForce = 5.0f;
+    [SerializeField] private float resistanceForce = 0.5f;
+    [SerializeField] private float deadZone = 1.0f;
+    [SerializeField] private float interval = 0.5f;
     [SerializeField] private Transform trackingSpace;
 
 
