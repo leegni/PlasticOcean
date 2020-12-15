@@ -11,6 +11,7 @@ public class SwimmingController : MonoBehaviour
     public GameObject leftHand;
     public GameObject rightHand;
     public SteamVR_Action_Boolean grabAction;
+    public SteamVR_Action_Boolean clickAction;
     public float rotateSpeed = 2.0f;
 
     [SerializeField] private float swimmingForce;
@@ -33,22 +34,21 @@ public class SwimmingController : MonoBehaviour
 
     private void Update()
     {
-        if (grabAction.GetLastState(handTypeR))
+        if (clickAction.GetLastStateDown(handTypeR))
         {
-            transform.Rotate(-Vector3.up * rotateSpeed * Time.deltaTime);
+            transform.Rotate(Vector3.up * 30);
 
         }
 
-        if (grabAction.GetLastState(handTypeL))
+        if (clickAction.GetLastStateDown(handTypeL))
         {
-            transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
+            transform.Rotate(-Vector3.up * 30);
         }
     }
 
     private void FixedUpdate()
     {
-        // bool rBtnPressed = SteamVR_Input.GetStateDown("GrabGrip", SteamVR_Input_Sources.RightHand);
-        //    bool lBtnPressed = SteamVR_Input.GetStateDown("GrabGrip", SteamVR_Input_Sources.LeftHand);
+    
         
         currentWaitTime += Time.deltaTime;
         if (grabAction.GetLastState(handTypeR) && grabAction.GetLastState(handTypeL))

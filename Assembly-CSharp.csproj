@@ -63,6 +63,7 @@
     <Compile Include="Assets\KIM\Sea\Davis3D\HumpbackWhale\SplineEditor\BezierSpline.cs" />
     <Compile Include="Assets\HUR\Asset\SeaTurtle\Scripts\SeaTurtleCameraScript.cs" />
     <Compile Include="Assets\KIM\Sea\Davis3D\HumpbackWhale\SplineEditor\BezierCurve.cs" />
+    <Compile Include="Assets\LEE\VRHandsShader\VRHandsDrawer.cs" />
     <Compile Include="Assets\LEE\02.Scripts\ActionTest.cs" />
     <Compile Include="Assets\KIM\Sea\Davis3D\HumpbackWhale\SplineEditor\Bezier.cs" />
     <Compile Include="Assets\HUR\Asset\SeaTurtle\Scripts\SeaTurtleCharacter.cs" />
@@ -96,21 +97,25 @@
     <Compile Include="Assets\LEE\02.Scripts\CustomGravity.cs" />
     <Compile Include="Assets\LEE\02.Scripts\Spawner.cs" />
     <Compile Include="Assets\LEE\02.Scripts\SwimmingController.cs" />
-    <Compile Include="Assets\KIM\VRHandsShader\VRHandsDrawer.cs" />
     <Compile Include="Assets\KIM\Sea\Davis3D\HumpbackWhale\SplineEditor\Line.cs" />
     <Compile Include="Assets\LEE\02.Scripts\ControllGrabObject.cs" />
     <Compile Include="Assets\LEE\02.Scripts\CubeSpawn.cs" />
     <Compile Include="Assets\LEE\02.Scripts\AutoMoving.cs" />
+    <Compile Include="Assets\KIM\CamBoth.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\KIM\Sea\Corals\__CubemapsShaders\ASE_Standart.shader" />
      <None Include="Assets\KIM\VoxelKei\VoxkeVolumetricLight\Sources\VoxkeVolumeLight_v5.shader" />
+     <None Include="Assets\LEE\VRHandsShader\Shaders\VRHands_Rim.shader" />
+     <None Include="Assets\LEE\VRHandsShader\Shaders\VRHands_Unlit.shader" />
      <None Include="Assets\LEE\02.Scripts\BoidCompute.compute" />
+     <None Include="Assets\LEE\VRHandsShader\Shaders\VRHands_Standard.shader" />
      <None Include="Assets\HUR\Asset\SeaTurtle\readme.txt" />
-     <None Include="Assets\KIM\VRHandsShader\Shaders\VRHandsInternalBlit.shader" />
+     <None Include="Assets\LEE\VRHandsShader\Shaders\VRHandsInternalBlit.shader" />
+     <None Include="Assets\LEE\VRHandsShader\readme.txt" />
+     <None Include="Assets\LEE\VRHandsShader\Shaders\VRHands_BumpedSpecular.shader" />
      <None Include="Assets\KIM\Sea\Corals\__CubemapsShaders\ASE_Standart2Sided.shader" />
      <None Include="Assets\KIM\VoxelKei\VoxkeVolumetricLight\Sources\CRT_VoxkeVolumeLight_v3.shader" />
-     <None Include="Assets\KIM\VRHandsShader\Shaders\VRHands_Rim.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\2020.1.17f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
