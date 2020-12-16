@@ -8,17 +8,18 @@ public class TriggerManager : MonoBehaviour
     public GameObject fishSpawnPoint, plasticSpawnPoint, lastSpawnPoint;
     private int triggerType = 0;
     public GameObject testObj;
-
     public GameObject spawnPlastic, spawnFish;
-
+    public bool lastScene = false;
+    public GameObject lastObj;
+ 
     void Start()
     {
-        
+
     }
 
- 
+    
 
-     void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("STRIGGER")){
         switch (triggerType)
@@ -77,5 +78,18 @@ public class TriggerManager : MonoBehaviour
         GameObject tobj = Instantiate<GameObject>(testObj);
         tobj.transform.position = lastSpawnPoint.transform.position;
         tobj.transform.rotation = Quaternion.identity;
+
+        lastObj.GetComponent<Transform>().position = transform.position - new Vector3(0, 0, -2);
+        lastObj.GetComponent<MeshRenderer>().enabled = true;
+        lastObj.GetComponent<Rigidbody>().AddForce(Vector3.forward * 10.0f);
+        lastObj.GetComponent<AutoMoving>().enabled = true;
+       
+  
+        lastScene = true;
+        GameObject[] plastciObj = GameObject.FindGameObjectsWithTag("PLASTIC");
+        for(int i=0; i < plastciObj.Length; i++)
+        {
+            Destroy(plastciObj[i]);
+        }
     }
 }

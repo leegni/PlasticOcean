@@ -5,27 +5,19 @@ using UnityEngine;
 public class Magnet : MonoBehaviour
 {
     [SerializeField]
-    private Transform[] points;
-     void Start()
-    {
-        points = GetComponentsInChildren<Transform>();
-    }
+   
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PLASTIC"))
         {
-            for(int i=8; i<points.Length; i++)
-            {
-                if (points[i].childCount == 0)
-                {
-                    other.transform.parent = points[i].transform;
+        
+                    other.transform.parent = transform;
+                    other.transform.position = transform.position+new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(0.2f, 0.6f), 0.6f);
                     other.GetComponent<Rigidbody>().isKinematic = true;
                     other.GetComponent<FloatingObject>().enabled = false;
-                    
-                }
-                else return;
+                     other.GetComponent<PlasticMoving>().enabled = false;
+                
             }
         }
     }
 
-}

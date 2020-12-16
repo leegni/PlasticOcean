@@ -11,6 +11,7 @@ TagManager:
   - FxTemporaire
   - PLASTIC
   - STRIGGER
+  - PLAYER
   layers:
   - Default
   - TransparentFX
